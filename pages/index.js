@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { auth } from '../firebase';
 import Login from './login';
 import { useRouter } from 'next/router';
+import Body from './body';
 
 export default function Home() {
     const Router = useRouter();
@@ -23,9 +24,12 @@ export default function Home() {
           );
         }
       });
-    }, []);
+    }, [dispatch]);
   return (
-    
-     <Header />
+    <div> 
+      
+      <Header />
+      <Body />
+    </div>
   )
 }
